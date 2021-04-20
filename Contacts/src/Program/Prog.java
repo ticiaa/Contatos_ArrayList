@@ -41,15 +41,15 @@ public class Prog {
                         String contname = ler.nextLine();
                         System.out.println("Número: ");
                         String numbercont = ler.nextLine();
+                        
+                        Random generator = new Random();
+                        int codecont = generator.nextInt((9999 - 1000 + 1) + 1000);
 
-                        if (contacts.contains(numbercont)) {
-                            System.out.println("Este contato já existe");
-                        } else {
-                            Random generator = new Random();
-                            int codecont = generator.nextInt((9999 - 1000 + 1) + 1000);
-
-                            contacts.add(new Contact(contname, numbercont, codecont));
-                            System.out.println("Contato salvo!");
+                        contacts.add(new Contact(contname, numbercont, codecont));
+                        System.out.println("Contato salvo!");
+                    } else {
+                        if(code == 2) {
+                            break;
                         }
                     }
 
